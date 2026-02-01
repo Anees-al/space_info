@@ -12,7 +12,7 @@ const AstreoidFinder = () => {
     useEffect(()=>{
         const fetchObjects=async()=>{
             try {
-                const res=await axios.get('http://localhost:3000/api/nearobject/getnearobject',{params:{start_date: startDate, end_date: endDate}});
+                const res=await axios.get('https://space-info.onrender.com/api/nearobject/getnearobject',{params:{start_date: startDate, end_date: endDate}});
                 setNearObjects(res.data.asteroids)
                 console.log(res.data.asteroids)
             } catch (error) {
